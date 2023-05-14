@@ -1,0 +1,22 @@
+---
+- name: "Ensure GPG tools are installed."
+  apt:
+    name: "{{ packages }}"
+    state: present
+  vars:
+    packages:
+      - "gpgv"
+      - "gnupg"
+
+- include_tasks: setup-repo-Ubuntu.yml
+  when:
+    - ansible_distribution == 'Ubuntu'
+
+- name: "Refresh apt sources list"
+  apt:
+    update_cache: true
+
+- name: "Install Workrave"
+  apt:
+    name: "{{ workrave_package }}"
+    state: present

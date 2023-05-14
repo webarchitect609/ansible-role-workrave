@@ -1,0 +1,3 @@
+---
+workrave_package: workrave-gnome
+workrave_deb_source: "deb http://repo.yandex.ru/yandex-disk/deb/ stable main"
