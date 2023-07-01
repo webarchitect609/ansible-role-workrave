@@ -1,3 +1,168 @@
 ---
 workrave_package: workrave-gnome
 workrave_deb_source: "ppa:rob-caelers/workrave"
+
+# Settings
+workrave_setup_enable: true
+workrave_setup: 
+  # TIMERS
+  # ======
+
+  # Micro-break
+  # -----------
+  
+  # Enable timer
+  /org/workrave/breaks/micro-pause/enabled: 'true'
+  
+  # Time between breaks
+  /org/workrave/timers/micro-pause/limit: 600
+
+  # Break duration
+  /org/workrave/timers/micro-pause/auto-reset: 45
+
+  # Postpone time
+  /org/workrave/timers/micro-pause/snooze: 180
+
+  # Break prompting count
+  /org/workrave/breaks/micro-pause/max-preludes: 2
+
+  # Show 'Postpone' button
+  /org/workrave/gui/breaks/micro-pause/ignorable-break: 'false'
+
+  # Show 'Skip' button
+  /org/workrave/gui/breaks/micro-pause/skippable-break: 'true'
+
+  # Micro-break
+  # -----------
+
+  # Enable timer
+  /org/workrave/breaks/rest-break/enabled: 'true'
+
+  # Time between breaks
+  /org/workrave/timers/rest-break/limit: 2700
+
+  # Break duration
+  /org/workrave/timers/rest-break/auto-reset: 600
+
+  # Postpone time
+  /org/workrave/timers/rest-break/snooze: 300
+
+  # Break prompting count
+  /org/workrave/breaks/rest-break/max-preludes: 3
+
+  # Show 'Postpone' button
+  /org/workrave/gui/breaks/rest-break/ignorable-break: 'true'
+
+  # Show 'Skip' button
+  /org/workrave/gui/breaks/rest-break/skippable-break: 'false'
+
+  # Number of exercises
+  /org/workrave/gui/breaks/rest-break/exercises: 0
+
+  # Start restbreak when screen is locked
+  /org/workrave/gui/breaks/rest-break/auto-natural: 'false'
+
+  # Enable shutting down the computer from the rest screen
+  /org/workrave/gui/breaks/rest-break/enable-shutdown: 'false'
+
+  # Daily limit
+  # -----------
+
+  # Enable timer
+  /org/workrave/breaks/daily-limit/enabled: 'true'
+
+  # Time before end
+  /org/workrave/timers/daily-limit/limit: 23400
+
+  # Postpone time
+  /org/workrave/timers/daily-limit/snooze: 1800
+
+  # Break prompting count
+  /org/workrave/breaks/daily-limit/max-preludes: 2
+
+  # Show 'Postpone' button
+  /org/workrave/gui/breaks/daily-limit/ignorable-break: 'true'
+
+  # Show 'Skip' button
+  /org/workrave/gui/breaks/daily-limit/skippable-break: 'false'
+
+  # Regard micro-breaks as activity( '' for `false`, 'micro_pause' for `true` )
+  /org/workrave/timers/daily-limit/monitor: ''
+
+  # USER INTERFACE
+  # ==============
+
+  # General
+  # -------
+
+  # Block mode( 0 for `No blocking`, 1 for `Block input`, 2 for `Block input and screen` )
+  /org/workrave/gui/breaks/block-mode: 1
+
+  # Show system tray icon
+  /org/workrave/gui/trayicon-enabled: 'true'
+
+  # Sounds
+  # ------
+
+  # Volume
+  /org/workrave/sound/volume: 48
+
+  # (skipping the rest, too much for manual configuration)
+
+  # Status window
+  # -------------
+
+  # Show status window
+  /org/workrave/gui/main-window/enabled: 'false'
+
+  # The status window stays always on top of other windows
+  /org/workrave/gui/main-window/always-on-top: 'true'
+
+  # Placement
+  # Micro-pause is always at position 0, only two other are moving.
+  # Next to each other positions are: 0 - micro-pause, 1 - restbreak, 2 - daily limit)
+  /org/workrave/gui/main-window/rest-break/position: 1
+  /org/workrave/gui/main-window/daily-limit/position: 2
+
+  # Cycle time
+  /org/workrave/gui/main-window/cycle-time: 10
+
+  # Timers
+  # (32 - hide; 0 - show; 2 - show only when this timer is first due)
+  ## Micro-break
+  /org/workrave/gui/main-window/micro-pause/flags: 0
+
+  ## Rest break
+  /org/workrave/gui/main-window/rest-break/flags: 0
+
+  ## Daily limit
+  /org/workrave/gui/main-window/daily-limit/flags: 0
+
+  # Applet
+  # ------
+
+  # Placement
+  # Micro-pause is always at position 0, only two other are moving.
+  # Next to each other positions are: 0 - micro-pause, 1 - restbreak, 2 - daily limit)
+  /org/workrave/gui/applet/rest-break/position: 1
+  /org/workrave/gui/applet/daily-limit/position: 2
+
+  # Cycle time
+  /org/workrave/gui/applet/cycle-time: 10
+
+  # Timers
+  # (32 - hide; 0 - show; 2 - show only when this timer is first due)
+  ## Micro-break
+  /org/workrave/gui/applet/micro-pause/flags: 0
+
+  ## Rest break
+  /org/workrave/gui/applet/rest-break/flags: 0
+
+  ## Daily limit
+  /org/workrave/gui/applet/daily-limit/flags: 0
+
+  # Fallback applet enabled
+  /org/workrave/gui/applet/fallback-enabled: 'true'
+
+  # Show status icon
+  /org/workrave/gui/applet/icon-enabled: 'true'
