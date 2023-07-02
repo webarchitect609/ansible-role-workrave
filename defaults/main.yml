@@ -9,6 +9,9 @@ workrave_package: workrave-gnome
 # apply dconf settings?
 workrave_setup_enable: true
 
+# which user profile to write with dconf
+workrave_setup_for_user: "{{ ansible_user_id }}"
+
 # dconf settings
 workrave_setup:
   # TIMERS
