@@ -33,5 +33,6 @@ Example Playbook
          - { role: webarchitect609.workrave }
 
 License & Author Information
--------
+----------------------------
+
 [BSD-3-Clause](LICENSE.md)

@@ -4,7 +4,7 @@ galaxy_info:
   namespace: webarchitect609
   role_name: workrave
   author: Gripinskiy Sergey
-  description: Installs Workrave from the official deb repository.
+  description: Installs Workrave from the official deb repository and configures it.
   company: ''
   license: BSD-3-Clause
   min_ansible_version: '2.12'
