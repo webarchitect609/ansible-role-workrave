@@ -28,7 +28,10 @@
     name: "{{ workrave_package }}"
     state: present
 
-- block:
+- name: "Become target user for setup"
+  become: true
+  become_user: "{{ workrave_setup_for_user }}"
+  block:
 
     - name: "Setup Workrave: simple values"
       community.general.dconf:
@@ -36,13 +39,10 @@
         value: "{{ item.value | quote }}"
       loop: "{{ workrave_setup | dict2items }}"
       when: workrave_setup_enable and item.value is not match("['\[].*['\]]")
-    
+
     - name: "Setup Workrave: structural values"
       community.general.dconf:
         key: "{{ item.key }}"
         value: "{{ item.value | string }}"
       loop: "{{ workrave_setup | dict2items }}"
       when: workrave_setup_enable and item.value is match("['\[].*['\]]")
-
-  become: true
-  become_user: "{{ workrave_setup_for_user }}"
