@@ -7,6 +7,7 @@
     packages:
       - "gpgv"
       - "gnupg"
+      - "dirmngr"
       - "dconf-cli"
       - "dconf-service"
       - "dbus-x11"
