@@ -1,9 +1,15 @@
 ---
-workrave_package: workrave-gnome
+
+# repository URL
 workrave_deb_source: "ppa:rob-caelers/workrave"
 
-# Settings
+# package name
+workrave_package: workrave-gnome
+
+# apply dconf settings?
 workrave_setup_enable: true
+
+# dconf settings
 workrave_setup:
   # TIMERS
   # ======

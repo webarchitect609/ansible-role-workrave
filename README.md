@@ -7,7 +7,8 @@ Ansible Role: Workrave
 [![License](https://img.shields.io/github/license/webarchitect609/ansible-role-workrave)](LICENSE.md)
 [![More stuff from me](https://img.shields.io/badge/galaxy-webarchitect609-000)](https://galaxy.ansible.com/webarchitect609)
 
-Installs [Workrave](https://workrave.org) from the official deb repository.
+Installs Repetitive Strain Injury prevention software [Workrave](https://workrave.org) from the official deb repository
+and configures it.
 
 Requirements
 ------------
@@ -17,16 +18,7 @@ None.
 Role Variables
 --------------
 
-None of the variables need to be altered for installing the latest stable version of the application.
-However, all available variables are listed below, along with default values (see `defaults/main.yml`):
-
-    workrave_package: workrave-gnome
-
-Package name to install
-
-    workrave_deb_source: "deb http://repo.yandex.ru/yandex-disk/deb/ stable main"
-
-Repository url.
+See [defaults/main.yml](defaults/main.yml)
 
 Dependencies
 ------------
