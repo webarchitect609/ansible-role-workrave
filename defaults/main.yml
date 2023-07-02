@@ -4,16 +4,16 @@ workrave_deb_source: "ppa:rob-caelers/workrave"
 
 # Settings
 workrave_setup_enable: true
-workrave_setup: 
+workrave_setup:
   # TIMERS
   # ======
 
   # Micro-break
   # -----------
-  
+
   # Enable timer
   /org/workrave/breaks/micro-pause/enabled: 'true'
-  
+
   # Time between breaks
   /org/workrave/timers/micro-pause/limit: 600
 
