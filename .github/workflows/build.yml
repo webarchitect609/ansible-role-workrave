@@ -19,12 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the codebase
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           path: 'webarchitect609.workrave'
 
       - name: Set up Python 3
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
@@ -46,17 +46,15 @@ jobs:
             playbook: converge.yml
           - distro: ubuntu2004
             playbook: converge.yml
-          - distro: ubuntu1804
-            playbook: converge.yml
 
     steps:
       - name: Check out the codebase
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           path: 'webarchitect609.workrave'
 
       - name: Set up Python 3
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
