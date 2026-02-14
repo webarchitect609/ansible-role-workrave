@@ -41,7 +41,7 @@ workrave_setup:
   # Show 'Skip' button
   /org/workrave/gui/breaks/micro-pause/skippable-break: 'true'
 
-  # Micro-break
+  # Rest-break
   # -----------
 
   # Enable timer
@@ -171,7 +171,7 @@ workrave_setup:
   /org/workrave/gui/applet/daily-limit/flags: 0
 
   # Fallback applet enabled
-  /org/workrave/gui/applet/fallback-enabled: 'true'
+  /org/workrave/gui/applet/fallback-enabled: 'false'
 
   # Show status icon
-  /org/workrave/gui/applet/icon-enabled: 'true'
+  /org/workrave/gui/applet/icon-enabled: 'false'
